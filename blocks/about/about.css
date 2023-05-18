@@ -1,18 +1,78 @@
 .about {
+  display: flex;
+  padding-left: calc(120/1440*100%);
+
+  justify-content: space-between;
 }
-.about__title {
+.about__section-title {
+  max-width: 460px;
+  /* font-weight: 700;
+  font-size: 55px;
+  line-height: 109%;
+  letter-spacing: -0.5px;
+  color: #151515;
+  margin: 0 0 50px; */
 }
 .about__text {
+  margin: 0;
+  max-width: 460px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  color: #222222;
+  opacity: 0.7;
+  margin-bottom: 50px;
 }
 .about__button {
-}
-.button {
+ margin-bottom: 167px;
+  padding: 0;
+  display: block;
+  width: 180px;
+  height: 50px;
+  background-color: #24b47e;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 129%;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #ffffff;
+
 }
 .about__bicycle-name {
+  position: relative;
+  font-size: 18px;
+  line-height: 100%;
+  color: #151515;
 }
+.about__bicycle-name::after {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 30px);
+  content: "";
+  width: 132px;
+  height: 2px;
+  background-color: #d7d4d4;
+}
+
 .about__image-container {
+  position: relative;
 }
 .about__placeholder-image {
+  max-width: 610px;
+  aspect-ratio: 610/836;
 }
 .about__bicycle-image {
+  position: sticky;
+  object-fit: contain;
+  height: 300px;
+  display: block;
+}
+
+.about__fix-container {
+  position: absolute;
+  bottom: 164px;
+  left: -200px;
+  width: 440px;
+  height: 352px;
 }

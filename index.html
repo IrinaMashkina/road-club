@@ -5,58 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Шоссе, ТТ и Грэвел</title>
-    <link rel="stylesheet" href="./pages/index.css">
+    <link rel="stylesheet" href="./pages/index.css" />
   </head>
-  <body>
+  <body class="page">
     <header class="header">
-      <nav class="navigation header__navigation"></nav>
-      <ul class="navigation__list">
-        <li>
-          <a href="" class="navigation__link link">Покрытия и градиенты</a>
-        </li>
-        <li><a href="" class="navigation__link link">Велосипеды</a></li>
-        <li><a href="" class="navigation__link link">Тренировки</a></li>
-      </ul>
+      <nav class="navigation header__navigation">
+        <ul class="navigation__list">
+          <li>
+            <a href="" class="navigation__link link">Покрытия и градиенты</a>
+          </li>
+          <li><a href="" class="navigation__link link">Велосипеды</a></li>
+          <li><a href="" class="navigation__link link">Тренировки</a></li>
+        </ul>
+      </nav>
     </header>
     <main class="content">
       <section class="about">
-        <h1 class="about__title">Шоссе, ТТ и Грэвел</h1>
-        <p class="about__text">
-          Триатлонные старты, горные серпантины или грейвел заезды по живописным
-          маршрутам – нужно только определиться с выбором велосипеда и
-          отправиться в путь.
-        </p>
-        <button type="button" class="about__button button"></button>
-        <span class="about__bicycle-name">Cannondale Systemsix</span>
+        <div class="about__content">
+          <h1 class="section-title about__section-title">Шоссе, ТТ и Грэвел</h1>
+          <p class="section-text">
+            Триатлонные старты, горные серпантины или грейвел заезды по
+            живописным маршрутам – нужно только определиться с выбором
+            велосипеда и отправиться в путь.
+          </p>
+          <button type="button" class="about__button button">Подробнее</button>
+          <span class="about__bicycle-name">Cannondale Systemsix</span>
+        </div>
         <div class="about__image-container">
           <img
             src="./images/placeholder-road.jpg"
             alt="Изображение трассы в лесу."
             class="about__placeholder-image"
           />
-          <img
-            src="./images/bike-fix.jpg"
-            alt="Велосипед Cannondale Systemsix."
-            class="about__bicycle-image"
-          />
+          <div class="about__fix-container">
+            <img
+              src="./images/bike-fix.png"
+              alt="Велосипед Cannondale Systemsix."
+              class="about__bicycle-image"
+            />
+          </div>
         </div>
       </section>
 
       <section class="blockquote">
-        <img
-          src="./images/blockquote-img.jpg"
-          alt="Изображение трассы в горах"
-          class="blockquote__image"
-        />
-        <div class="blockquote__text">
-          <blockquote class="blockquote__quote">
-            <p class="blockquote__heading">
-              &laquo;Катайся много или мало, долго или коротко, как
-              хочешь&nbsp;- но&nbsp;катайся&raquo;
-            </p>
-          </blockquote>
-          <p class="blockquote__author">Эдди Меркс</p>
-          <p class="blockquote__author-subline">Велогонщик</p>
+        <div class="blockquote__two-columns">
+          <img
+            src="./images/blockquote-img.jpg"
+            alt="Изображение трассы в горах"
+            class="blockquote__image"
+          />
+          <div class="blockquote__text">
+            <blockquote class="blockquote__quote">
+              <p class="blockquote__heading">
+                &laquo;Катайся много или мало, долго или коротко, как
+                хочешь&nbsp;- но&nbsp;катайся&raquo;
+              </p>
+            </blockquote>
+            <div class="blockquote__author-container">
+              <p class="blockquote__author">Эдди Меркс</p>
+              <p class="blockquote__author-subline">Велогонщик</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -67,17 +76,17 @@
           <h2 class="section-title">ТТ</h2>
         </div>
         <div class="tracks__text-container">
-          <p class="tracks__text">
+          <p class="section-text tracks__text">
             На шоссейном велосипеде можно ездить по асфальту на разных
             градиентах: будь то горы или равнины. Гонки проходят в командном
             пелотоне, но тренироваться можно и самостоятельно.
           </p>
-          <p class="tracks__text">
+          <p class="section-text tracks__text">
             Грэвел похож на шоссейный велосипед, но конструкция рамы немного
             отличается, и на нём стоят более широкие покрышки, всё для того
             чтобы проехать по лёгкому бездорожью.
           </p>
-          <p class="tracks__text">
+          <p class="section-text tracks__text">
             ТТ — это велосипед для триатлона или раздельного старта, гооняют на
             таком велике только по равнинному асфальту, велик очень быстрые и
             аэродинамичный.
@@ -109,8 +118,35 @@
       </section>
 
       <section class="bicycles">
-        <h2 class="section-title">Велосипеды</h2>
-        <ul class="bicycles__img-container">
+        <h2 class="section-title bicycles__title">Велосипеды</h2>
+        <nav class="bicycles__navigation">
+          <ul class="bicycles__list">
+            <li class="bicycles__item">
+              <button
+                type="button"
+                id="highwayButton"
+                class="bicycles__button bicycles__button_active"
+              >
+                Шоссе
+              </button>
+            </li>
+            <li class="bicycles__item">
+              <button
+                type="button"
+                id="gravelButton"
+                class="bicycles__button"
+              >
+                Грэвел
+              </button>
+            </li>
+            <li class="bicycles__item">
+              <button type="button" id="TTButton" class="bicycles__button">
+                TT
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <ul class="bicycles__img-container bicycles__img-container_type_highway bicycles__img-container_active" >
           <li>
             <a
               class="bicycles__image-link"
@@ -152,7 +188,7 @@
           </li>
         </ul>
 
-        <ul class="bicycles__img-container">
+        <ul class="bicycles__img-container bicycles__img-container_type_grave">
           <li>
             <a
               class="bicycles__image-link"
@@ -194,7 +230,7 @@
           </li>
         </ul>
 
-        <ul class="bicycles__img-container">
+        <ul class="bicycles__img-container bicycles__img-container_type_TT">
           <li>
             <a
               class="bicycles__image-link"
@@ -235,37 +271,11 @@
             </a>
           </li>
         </ul>
-        <nav class="navigation bicycles__navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <button
-                type="button"
-                id="highwayButton"
-                class="navigation__button navigation__button_active"
-              >
-                Шоссе
-              </button>
-            </li>
-            <li class="navigation__item">
-              <button
-                type="button"
-                id="gravelButton"
-                class="navigation__button"
-              >
-                Грэвел
-              </button>
-            </li>
-            <li class="navigation__item">
-              <button type="button" id="TTButton" class="navigation__button">
-                TT
-              </button>
-            </li>
-          </ul>
-        </nav>
+       
       </section>
       <section class="workout">
-        <h2 class="section-title">Тренировки</h2>
-        <p class="workout__text">
+        <h2 class="section-title workout__section-ttile">Тренировки</h2>
+        <p class="section-text workout__section-text">
           Чтобы найти маршрут для тренировки можно воспользоваться сервисом
           Komoot, а записать эти тренировки поможет приложение Strava, а также
           это приложение позволит построить тренировочный план.
@@ -278,6 +288,7 @@
             <a href="https://www.komoot.com" class="workout__link">Komoot</a>
           </li>
         </ul>
+        <img src="./images/workout-img.jpg" alt="Дорога для тренировки" class="workout__image">
       </section>
     </main>
     <footer class="footer">

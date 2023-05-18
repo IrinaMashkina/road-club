@@ -1,14 +1,55 @@
 .blockquote {
+  padding-top: 120px;
+  padding-bottom: 60px;
+  padding-left: calc(120 / 1440 * 100%);
+  padding-right: calc(120 / 1440 * 100%);
 }
+
+.blockquote__two-columns {
+  display: flex;
+  column-gap: 80px;
+}
+
 .blockquote__image {
+  width: 650px;
+  height: 460px;
 }
 .blockquote__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .blockquote__quote {
+  margin: 0;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 44px;
+  /* or 129% */
+  letter-spacing: -0.5px;
+  color: #151515;
 }
 .blockquote__heading {
+  margin: 0;
 }
+
 .blockquote__author {
+  margin: 0;
+  align-content: end;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  /* identical to box height, or 160% */
+
+  color: #151515;
 }
 .blockquote__author-subline {
+  margin: 0;
+  align-content: end;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height, or 175% */
+  color: #222222;
+  opacity: 0.7;
 }

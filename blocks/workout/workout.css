@@ -1,8 +1,42 @@
 .workout {
+  max-width: 1440px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: calc(120 / 1440 * 100%);
+  display: grid;
+  grid-template-areas:
+    "title image"
+    "text image"
+    "links image";
 }
-.workout__text {
+
+.workout__section-ttile {
+grid-area: title;
 }
+
+.workout__section-text {
+grid-area: text;
+}
+
 .workout__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  grid-area: links;
 }
 .workout__link {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #151515;
+}
+
+.workout__image {
+  width: 580px;
+  height: 460px;
+  object-fit: cover;
+  object-position: center;
+  grid-area: image;
 }
