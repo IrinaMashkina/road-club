@@ -1,6 +1,6 @@
 .checkbox {
   display: flex;
-  margin-top: 32px;
+  /* margin-top: 32px; */
 }
 
 /* скрытый чекбокс*/
@@ -20,10 +20,11 @@
 
 /* видимый чекбокс */
 .checkbox__input-visible {
+  margin: 2px 22px;
   position: relative;
   width: 44px;
   height: 24px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 9999px;
   display: inline-block;
   transition: background-color ease-in-out 0.2s;
@@ -35,6 +36,7 @@
   } */
 
 .checkbox__input-visible::before {
+  content: "";
   position: absolute;
   width: 20px;
   height: 20px;
@@ -50,7 +52,7 @@
 
 /* checked */
 .checkbox__input-invisible:checked + .checkbox__input-visible {
-  background-color: #2be080;
+  /* background-color: #2be080; */
 }
 
 .checkbox__input-invisible:checked + .checkbox__input-visible::before {
@@ -62,16 +64,29 @@
 }
 
 .checkbox__input-visible:hover::before {
-    background-color: #319E75;;
-  }
+  background-color: #319e75;
+}
 
-  .checkbox {
-  }
-  .checkbox__input-invisible {
-  }
-  .checkbox__input-invisible_disabled {
-  }
-  .checkbox__input-visible {
-  }
-  .checkbox__input-visible_disabled {
-  }
+.checkbox {
+}
+.checkbox__input-invisible {
+}
+.checkbox__input-invisible_disabled {
+}
+.checkbox__input-visible {
+}
+.checkbox__input-visible_disabled {
+}
+
+.checkbox::before {
+  content: url(../../images/sun-icon.svg);
+  width: 28px;
+  height: 28px;
+}
+
+.checkbox::after {
+  content: url(../../images/moon-icon.svg);
+  width: 20px;
+  height: 20px;
+  margin: 2px 0;
+}

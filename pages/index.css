@@ -12,5 +12,6 @@
 @import url(../blocks/tracks/tracks.css);
 @import url(../blocks/bicycles/bicycles.css);
 @import url(../blocks/workout/workout.css);
-
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/form/form.css);
 @import url(../blocks/checkbox/checkbox.css);

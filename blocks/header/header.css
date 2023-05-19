@@ -5,11 +5,15 @@
   display: flex;
   justify-content: flex-end;
   position: relative;
+
 }
 
 .header__navigation {
+  z-index: 99999;
+  background: #f4f4f4;
   position: fixed;
   top: 0;
+  left: 0;
   right: 0;
   padding: 28px 0;
 }

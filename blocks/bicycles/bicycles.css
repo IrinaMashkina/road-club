@@ -16,12 +16,14 @@
 }
 
 .bicycles__img-container {
+  max-width: 1200px;
   grid-area: bicycles;
   display: none;
   justify-content: space-between;
   list-style-type: none;
   padding: 0;
   margin: 120px 0 0;
+  column-gap: 3px;
 }
 
 .bicycles__img-container_active {
